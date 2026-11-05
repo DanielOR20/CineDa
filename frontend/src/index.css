@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background-color: #e5e5ea;
+  color: #1d1d1f;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* MODO CLARO ESTILO MACOS / IOS */
+html, body, #root {
+  background-color: #e5e5ea !important;
+  color: #1d1d1f !important;
+}
+
+main, div[class*="bg-[#08090a]"], div[class*="bg-[#0a0c10]"] {
+  background-color: #f5f5f7 !important;
+  color: #1d1d1f !important;
+}
+
+/* Ventana, header y sidebar limpios */
+header, aside, nav, div[class*="bg-cineda-surface"], div[class*="bg-[#0b0d11]"], div[class*="bg-[#0e1117]"], div[class*="bg-[#0f1115]"] {
+  background-color: #ffffff !important;
+  border-color: #e5e7eb !important;
+  color: #1d1d1f !important;
+}
+
+/* Tarjetas, paneles y modales en blanco con sombra suave */
+div[class*="bg-slate-"], div[class*="bg-cineda-card"], div[class*="bg-[#111317]"], div[class*="bg-[#14171d]"], div[class*="bg-[#12161f]"], div[class*="bg-[#141820]"] {
+  background-color: #ffffff !important;
+  border-color: #e5e7eb !important;
+  color: #1d1d1f !important;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05);
+}
+
+/* Textos y subtítulos legibles en fondo claro */
+h1, h2, h3, h4, [class*="text-white"], [class*="text-[#f8fafc]"], [class*="text-[#f1f5f9]"] {
+  color: #111827 !important;
+}
+p, span[class*="text-[#8b949e]"], [class*="text-zinc-400"], [class*="text-zinc-300"], [class*="text-[#94a3b8]"], [class*="text-[#cbd5e1]"] {
+  color: #4b5563 !important;
+}
+
+/* Tablas estilo Apple: encabezados sutiles y hover limpio */
+thead, tr[class*="bg-[#0f1115]"], tr[class*="bg-[#0b0d11]"], thead tr {
+  background-color: #f9fafb !important;
+  border-color: #e5e7eb !important;
+}
+th {
+  color: #6b7280 !important;
+  background-color: #f9fafb !important;
+}
+tbody tr {
+  border-color: #f3f4f6 !important;
+  color: #1f2937 !important;
+}
+tbody tr:hover {
+  background-color: #f3f4f6 !important;
+}
+
+/* Inputs y buscador */
+input, select, textarea {
+  background-color: #ffffff !important;
+  border: 1px solid #d1d5db !important;
+  color: #111827 !important;
+}
+input::placeholder, textarea::placeholder {
+  color: #9ca3af !important;
+}
+
+/* Botón de acción verde lima / manzana */
+button[class*="bg-[#84cc16]"], a[class*="bg-[#84cc16]"] {
+  background-color: #10b981 !important;
+  color: #ffffff !important;
+}
+button[class*="bg-[#84cc16]"]:hover, a[class*="bg-[#84cc16]"]:hover {
+  background-color: #059669 !important;
+}
+
+/* Enlaces inactivos en sidebar */
+aside a:not([class*="bg-[#84cc16]/10"]):not([class*="bg-emerald"]):hover {
+  background-color: #f3f4f6 !important;
+  color: #111827 !important;
+}
+
+/* Scrollbar fino tipo macOS Light */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f5f7;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Quitar fondos negros forzados en celdas, badges y códigos */
+td span, 
+td div, 
+span[class*="bg-"], 
+div[class*="bg-"] {
+  background-color: #f3f4f6 !important;
+  color: #1f2937 !important;
+  border-color: #e5e7eb !important;
+}
+
+/* Colores legibles para badges de estado */
+span:is([class*="emerald"], [class*="verde"]),
+span[data-status="activo"], span[data-status="activa"], span[data-status="valida"] {
+  background-color: #ecfdf5 !important;
+  color: #047857 !important;
+  border-color: #a7f3d0 !important;
+}
